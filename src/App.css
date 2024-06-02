@@ -1,0 +1,193 @@
+/* main.css */
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: black;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color: black;
+}
+
+.profile-button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.profile-button img{
+  width: 40px;
+}
+
+.person-icon {
+  padding-top: 0.5rem;
+  padding-right: 100px;
+}
+
+.right-section {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.add-button {
+  padding: 3px 6px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: hwb(0 50% 50% / 0.575);
+  color: yellow;
+  cursor: pointer;
+}
+
+.grid-container {
+  flex: 1; /* Make sure the grid container takes the available space */
+  overflow-y: auto; /* Enable vertical scrolling if necessary */
+  padding-bottom: 100px; /* Space to ensure the grid doesn't overlap the footer */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr)); /*Dos columnas*/
+  gap: 20px;
+  padding: 10px 15px;
+  background-color: black;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.card img {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.prize-button {
+  border: none;
+  border-radius: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  background-color: black;
+}
+
+.shop-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.shop-button {
+  padding: 6px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffdb58; /* Color mostaza */
+  color: black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+/* Media Queries para tablets */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Más grande para tablets */
+  }
+
+  .card {
+    height: 200px; /* Aumenta la altura para mayor visibilidad en pantallas más grandes */
+  }
+
+  .prize {
+    font-size: 1.5rem;
+  }
+
+  .shop-button {
+    font-size: 1.25rem; /* Texto más grande en pantallas más grandes */
+  }
+}
+
+/* Media Queries para escritorios y pantallas más grandes */
+@media (min-width: 1024px) {
+  .profile-button img{
+    width: 40px;
+  }
+
+  .right-section img {
+    width: 40px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas para escritorio */
+    gap: 30px; /* Mayor espacio entre columnas */
+  }
+
+  .card {
+    height: 250px; /* Mayor altura para las tarjetas */
+  }
+
+  .card img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .prize {
+    font-size: 1.8rem;
+  }
+
+  .shop-button {
+    font-size: 1.5rem; /* Texto más grande */
+  }
+}
