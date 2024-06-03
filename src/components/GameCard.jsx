@@ -1,23 +1,17 @@
 // GameCard.js
 import React from 'react';
 
-const GameCard = ({ color, symbol, prize }) => {
-  const cardStyle = {
-    backgroundColor: color,
-    padding: '20px',
-    borderRadius: '10px',
-    textAlign: 'center',
+export const GameCard = ({ gameCards }) => {
+  const renderGameCards = () => {
+    return gameCards.map((card, index) => (
+      <div key={index} className="card" style={{ backgroundColor: card.color }}>
+        <img src={card.symbol} alt="Symbol" />
+        <button className='prize-button' style={{ backgroundColor: card.color }}>
+          <h2 className='prize'> {`S/.${card.prize}`} </h2>
+        </button>
+      </div>
+    ));
   };
 
-  return (
-    <div className="card" style={cardStyle}>
-      <img src={symbol} alt="Symbol"/>
-      <button className='prize-button' style={{backgroundColor: color}}>
-        <h2 className='prize'> {`S/.${prize}`} </h2>
-      </button>
-    </div>
-  );
+  return { renderGameCards };
 };
-
-
-export default GameCard;
