@@ -31,7 +31,7 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 5px;
@@ -42,28 +42,32 @@ body {
   background-color: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
+  padding-left: 1.6rem;
 }
 
 .profile-button img{
-  width: 40px;
+  width: 2.5rem;
 }
 
 .person-icon {
-  padding-top: 0.5rem;
-  padding-right: 100px;
+  padding-top: 0.25rem;
 }
 
 .right-section {
   display: flex;
-  gap: 0.5rem;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-left: 10px;
+  gap: 0.5rem;
+  padding-right: 1.8rem;
+}
+
+.right-section img {
+  width: 2.3rem;
 }
 
 .add-button {
   padding: 3px 6px;
-  margin-right: 10px;
   border: none;
   border-radius: 20px;
   background-color: hwb(0 50% 50% / 0.575);
@@ -72,9 +76,9 @@ body {
 }
 
 .grid-container {
-  flex: 1; /* Make sure the grid container takes the available space */
-  overflow-y: auto; /* Enable vertical scrolling if necessary */
-  padding-bottom: 100px; /* Space to ensure the grid doesn't overlap the footer */
+  flex: 1;
+  overflow-y: auto; 
+  padding-bottom: 100px; 
 }
 
 .grid {
@@ -90,7 +94,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 150px;
 }
 
 .card img {
@@ -138,16 +142,14 @@ body {
 }
 
 /* Media Queries para tablets */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .grid {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(200px, 1fr)
-    ); /* Más grande para tablets */
+    grid-template-columns: repeat( auto-fill, minmax(200px, 1fr)); /* Más grande para tablets */
+    padding: 10px 22.5px;
   }
 
   .card {
-    height: 200px; /* Aumenta la altura para mayor visibilidad en pantallas más grandes */
+    height: 180px; /* Aumenta la altura para mayor visibilidad en pantallas más grandes */
   }
 
   .prize {
@@ -159,14 +161,25 @@ body {
   }
 }
 
-/* Media Queries para escritorios y pantallas más grandes */
-@media (min-width: 1024px) {
+
+@media (min-width: 685px){
+  .profile-button {
+    padding-left: 2.5rem;
+  }
+  
+  .right-section {
+    padding-right: 2.7rem;
+  }
+}
+
+
+@media (min-width: 890px) {
   .profile-button img{
-    width: 40px;
+    width: 3rem;
   }
 
-  .right-section img {
-    width: 40px;
+  .right-section img{
+    width: 2.8rem;
   }
 
   .grid {
@@ -175,12 +188,31 @@ body {
   }
 
   .card {
-    height: 250px; /* Mayor altura para las tarjetas */
+    height: 220px; /* Mayor altura para las tarjetas */
   }
 
-  .card img {
-    max-width: 100px;
-    max-height: 100px;
+  .shop-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .prize {
+    font-size: 1.5rem;
+  }
+
+  .shop-button {
+    font-size: 1.25rem; /* Texto más grande */
+  }
+}
+
+/* Media Queries para escritorios y pantallas más grandes */
+@media (min-width: 1024px) {
+  .profile-button {
+    padding-left: 3.5rem;
+  }
+  
+  .right-section {
+    padding-right: 3.7rem;
   }
 
   .prize {
