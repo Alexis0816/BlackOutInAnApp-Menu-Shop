@@ -1,0 +1,51 @@
+.shop-app {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.shop-header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+}
+
+.unlock-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  gap: 2rem;
+  
+  background-color: yellow;
+  font-weight: bold;
+  margin: 1rem;
+  color: black;
+}
+
+.unlock-all img {
+  width: 7rem;
+}
+
+.unlock-text {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  gap: 2rem;
+  font-size: 2.5rem;
+}
+
+
+.content-icon-footer {
+  display: flex;
+  background-color: white;
+  border-radius: 100px;
+}
