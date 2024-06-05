@@ -4,6 +4,7 @@ import { Shop } from './components/Shop/Shop.jsx';
 
 import lockedSymbol from './assets/locked.svg';
 import playSymbol from './assets/play.svg';
+import padlockSymbol from './assets/padlock.svg';
 
 export function App() {
 
@@ -19,10 +20,10 @@ export function App() {
   ];
 
   const gameCardsShop = [
-    { color: 'white', symbol: lockedSymbol, prize: "7" },
-    { color: 'aquamarine', symbol: playSymbol, prize: "4" },
-    { color: 'gray', symbol: playSymbol, prize: "5" },
-    { color: 'white', symbol: lockedSymbol, prize: "10" },
+    { color: 'white', symbol: playSymbol, prize: "7" },
+    { color: 'aquamarine', symbol: padlockSymbol, prize: "4" },
+    { color: 'gray', symbol: padlockSymbol, prize: "5" },
+    { color: 'white', symbol: playSymbol, prize: "10" },
   ];
 
   const [currentView, setCurrentView] = useState('gameCardWrapper');
