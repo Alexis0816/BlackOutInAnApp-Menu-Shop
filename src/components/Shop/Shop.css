@@ -1,18 +1,52 @@
-.shop-app {
-  text-align: center;
-  padding-top: 1rem;
+.header-shop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color: black;
+
+  position: sticky; /* Fija el header */
+  top: 0; /* Lo posiciona en la parte superior */
+  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
 }
 
-.shop-header {
-  background-color: #333;
-  color: white;
-  padding: 1rem;
+
+.profile-button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+  padding-left: 1.6rem;
 }
 
-.shop-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 1rem;
+.profile-button img{
+  width: 2.5rem;
+}
+
+.person-icon {
+  padding-top: 0.25rem;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding-right: 1.8rem;
+}
+
+.right-section img {
+  width: 2.3rem;
+}
+
+.add-button {
+  padding: 3px 6px;
+  border: none;
+  border-radius: 20px;
+  background-color: hwb(0 50% 50% / 0.575);
+  color: yellow;
+  cursor: pointer;
 }
 
 .unlock-all {
@@ -20,11 +54,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 300px;
   border: 1px solid #ccc;
   border-radius: 8px;
   gap: 2rem;
-  
+
   background-color: yellow;
   font-weight: bold;
   margin: 1rem;
@@ -42,7 +77,6 @@
   gap: 2rem;
   font-size: 2.5rem;
 }
-
 
 .content-icon-footer {
   display: flex;

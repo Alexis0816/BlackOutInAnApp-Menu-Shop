@@ -2,34 +2,48 @@ import React from 'react';
 import './Shop.css';
 import dolar from './dolar.svg'
 import outline from './abajo.png'
+import bottle from './beer-bottle.png'
+import profile from './profile.png'
 
 import { GameCard } from '../GameCard.jsx';
 
 
 export function Shop({ gameCards, onNavigate }) {
-
   return (
-    <main className="shop-app">
-      <header className="unlock-all">
+    <>
+      <header className='header-shop'>
+        <div className="person-icon">
+          <button className='profile-button'>
+            <img src={profile} alt="Ícono de perfil" />
+          </button>
+        </div>
+
+        <div className="right-section">
+          <button className="add-button">+</button>
+          <img src={bottle} alt="Ícono de botella" />
+        </div>
+      </header>
+
+      <div className="unlock-all">
         <img src={dolar} alt="Ícono de dolar" className='dolar-icon' />
         <div className="unlock-text">
           <span> Unlock all </span>
           <span> games </span>
         </div>
-      </header>
+      </div>
 
-      <div className="grid-container">
+      <main className="grid-container">
         <div className="grid">
           <GameCard gameCards={gameCards} />
         </div>
-      </div>
+      </main>
 
       <footer className="footer">
         <div className='content-icon-footer'>
           <img src={outline} alt="Ícono abajo" className='outline-icon' />
         </div>
-        <button className="menu-button" onClick={() => onNavigate('gameCardWrapper')}>Menú</button>
+        <button className="menu-button" onClick={() => onNavigate('gameCardWrapper')}> Menu </button>
       </footer>
-    </main>
+    </>
   );
 }

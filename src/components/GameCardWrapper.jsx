@@ -5,10 +5,8 @@ import shop from '../assets/shop.png';
 import { GameCard } from './GameCard.jsx';
 
 export function GameCardWrapper({ gameCards, onNavigate }) {
-  // console.log(gameCards)
-
   return (
-    <main className="app">
+    <>
       <header className="header">
         <div className="person-icon">
           <button className='profile-button'>
@@ -22,16 +20,16 @@ export function GameCardWrapper({ gameCards, onNavigate }) {
         </div>
       </header>
 
-      <div className="grid-container">
+      <main className="grid-container">
         <div className="grid">
           <GameCard gameCards={gameCards} />
         </div>
-      </div>
+      </main>
 
       <footer className="footer">
         <img src={shop} alt="Ícono de tienda" className="shop-icon" />
-        <button className="shop-button" onClick={() => onNavigate('shop')}>Tienda</button>
+        <button className="shop-button" onClick={() => onNavigate('shop')}> Shop </button>
       </footer>
-    </main>
+    </>
   );
 }

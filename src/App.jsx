@@ -11,14 +11,16 @@ export function App() {
     { color: 'yellow', symbol: playSymbol, prize: "5" },
     { color: 'white', symbol: lockedSymbol, prize: "7" },
     { color: 'white', symbol: lockedSymbol, prize: "10" },
-    { color: 'turquoise', symbol: playSymbol, prize: "4" },
+    { color: 'aquamarine', symbol: playSymbol, prize: "4" },
     { color: 'red', symbol: playSymbol, prize: "6" },
     { color: 'white', symbol: lockedSymbol, prize: "8" },
+    { color: 'white', symbol: lockedSymbol, prize: "9" },
+    { color: 'yellowgreen', symbol: lockedSymbol, prize: "5" },
   ];
 
   const gameCardsShop = [
     { color: 'white', symbol: lockedSymbol, prize: "7" },
-    { color: 'turquoise', symbol: playSymbol, prize: "4" },
+    { color: 'aquamarine', symbol: playSymbol, prize: "4" },
     { color: 'gray', symbol: playSymbol, prize: "5" },
     { color: 'white', symbol: lockedSymbol, prize: "10" },
   ];
