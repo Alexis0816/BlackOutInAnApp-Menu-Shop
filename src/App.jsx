@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GameCardWrapper } from './components/GameCardWrapper';
 import { Shop } from './components/Shop/Shop.jsx';
 
@@ -6,7 +6,7 @@ import lockedSymbol from './assets/locked.svg';
 import playSymbol from './assets/play.svg';
 
 export function App() {
-  // Aquí defines gameCards con los datos que deseas mostrar
+
   const gameCardsMenu = [
     { color: 'yellow', symbol: playSymbol, prize: "5" },
     { color: 'white', symbol: lockedSymbol, prize: "7" },
@@ -28,6 +28,14 @@ export function App() {
   const handleNavigate = (view) => {
     setCurrentView(view);
   };
+
+  useEffect(() => {
+    if (currentView === 'gameCardWrapper') {
+      document.title = 'Menú | BlackOut In An Ap';
+    } else if (currentView === 'shop') {
+      document.title = 'Shop | BlackOut In An Ap';
+    }
+  }, [currentView]);
   
   return (
     <>
@@ -36,6 +44,8 @@ export function App() {
     </>
   );
 }
+
+
 
 export default App;
 
