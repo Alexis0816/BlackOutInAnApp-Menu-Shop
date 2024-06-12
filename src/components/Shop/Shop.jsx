@@ -7,7 +7,6 @@ import profile from './profile.png'
 
 import { GameCard } from '../GameCard.jsx';
 
-
 export function Shop({ gameCards, onNavigate }) {
   return (
     <>

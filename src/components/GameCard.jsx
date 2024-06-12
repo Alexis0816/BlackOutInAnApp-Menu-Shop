@@ -15,7 +15,3 @@ export const GameCard = ({ gameCards }) => {
 
   return renderGameCards();
 };
-
-
-
-
