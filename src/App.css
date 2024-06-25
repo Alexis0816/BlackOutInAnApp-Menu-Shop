@@ -24,7 +24,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.header {
+.header, .header-shop {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,6 +71,41 @@ body {
   background-color: hwb(0 50% 50% / 0.575);
   color: yellow;
   cursor: pointer;
+}
+
+.unlock-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  gap: 2rem;
+
+  background-color: yellow;
+  font-weight: bold;
+  margin: 1rem;
+  color: black;
+}
+
+.unlock-all img {
+  width: 7rem;
+}
+
+.unlock-text {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  gap: 2rem;
+  font-size: 2.5rem;
+}
+
+.content-icon-footer {
+  display: flex;
+  background-color: white;
+  border-radius: 100px;
 }
 
 .grid-container {
@@ -124,7 +159,7 @@ body {
   background-color: black;
 }
 
-.shop-icon {
+.shop-icon, .outline-icon {
   width: 40px;
   width: 40px;
 }
@@ -139,6 +174,8 @@ body {
   font-size: 0.8rem;
   cursor: pointer;
 }
+
+
 
 /* Media Queries para tablets */
 @media (min-width: 600px) {
