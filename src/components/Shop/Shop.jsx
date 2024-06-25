@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../App.css'
-// import './Shop.css';
 import dolar from '../../assets/dolar.svg'
 import outline from '../../assets/abajo.png'
 import bottle from '../../assets/beer-bottle.png'
